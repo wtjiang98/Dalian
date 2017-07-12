@@ -44,8 +44,7 @@ public class DeptDaoImpl implements DeptDao{
 				int deptno = rs.getInt(1);
 				String deptname = rs.getString(2);
 				String loc = rs.getString(3);
-				Dept d = new Dept(deptno,deptname,loc);
-				depts.add(d);
+				depts.add(new Dept(deptno,deptname,loc));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
